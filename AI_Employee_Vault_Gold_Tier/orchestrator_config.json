@@ -1,0 +1,41 @@
+{
+  "watchers": {
+    "filesystem": {
+      "enabled": true,
+      "interval": 30
+    },
+    "gmail": {
+      "enabled": true,
+      "interval": 120
+    },
+    "whatsapp": {
+      "enabled": true,
+      "interval": 30
+    }
+  },
+  "schedules": {
+    "daily_briefing": {
+      "enabled": true,
+      "time": "08:00"
+    },
+    "weekly_audit": {
+      "enabled": true,
+      "day": "monday",
+      "time": "07:00"
+    },
+    "linkedin_post": {
+      "enabled": true,
+      "days": [
+        "tue",
+        "wed",
+        "thu"
+      ],
+      "time": "09:00"
+    }
+  },
+  "processing": {
+    "auto_process": true,
+    "max_iterations": 10,
+    "approval_check_interval": 60
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "twitter-mcp",
+  "version": "1.0.0",
+  "description": "Gold Tier Twitter/X MCP Server - Integration with Twitter API v2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "auth": "node auth.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.9",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": [
+    "mcp",
+    "twitter",
+    "x",
+    "social-media",
+    "gold-tier"
+  ],
+  "author": "Gold Tier AI Employee",
+  "license": "MIT"
+}

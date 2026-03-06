@@ -1,0 +1,118 @@
+---
+type: email
+from: "AI Automation Agency Hub (Skool)" <noreply@skool.com>
+subject: Weekly digest for Sat, Jan 17 2026
+received: 2026-02-26T10:12:56.196289
+priority: medium
+status: pending
+message_id: 19bee1a0da9cdd50
+---
+
+## Email Content
+
+**From:** "AI Automation Agency Hub (Skool)" <noreply@skool.com>  
+**Subject:** Weekly digest for Sat, Jan 17 2026  
+**Date:** Sat, 24 Jan 2026 03:44:01 +0000 (UTC)
+
+ 
+
+
+
+
+
+AI Automation Agency Hub
+
+
+
+( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJqYIach7-2FtMhH3n-2Fh9qG9l0GnWL4PQOS-2FZ5VkS4LpRuxHPJP5z1DFqcAdbM45gqXh7f0er2lpT40w361BDI0xenY65GuhcYmaYM7j40I2InVtSXWhnwWg-2Bt3GWioiuDkTuvlQ7DSg2aHMQ7uvTTrO7bp1zL789D-2FqVuZ0EwhLHi-2F34FaZIPirIP4HzmOFaOTAlmR82Yfdu4f1SvpmUiFexY-3D_Wml_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BIoWLcJ3WUeiFoJNWpf1NwX7LGQc-2BPjcTWbWbaskMFq-2BIcQf0WQmNmgyQE5OGlAs2WCUiZOuev7Qa-2Ftbdnitxf-2B2a2r3Q4OD8BahFR6I6sDr-2BNSPIyiA0-2F4E9QpZSCrkVTi8TKKseWG7LV05fmIJY0JmHwDB8E-2BD-2F6YSiHjLf7ewirjGYf2AkCgR0qScK2QifA-3D-3D )
+
+
+
+**************
+
+Weekly Digest
+
+**************
+
+
+
+For Sat, Jan 17 2026
+
+1499 posts • 5019 comments • 2398 new members
+
+Here&#39;s the top 10 posts
+
+
+
+                              
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+(  )
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+  
+
+
+
+(  )
+
+
+
+Showing top 10 of 1499 posts...
+
+
+
+Read More
+
+( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJhjCCMpNgLJK-2Bho0s3QBPM5DSBdK3loTk0sY0WAy-2F0NT9m3y_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BGiZ-2FxMKpT7jLj7F-2B2alJaH4WCfWUe3sclcrxB-2BQUQxb6XjCaMO2Kbl1M-2BpQlVdQmxz7vgHTBoToY-2FfFB4LhLlgdrSixJh8oNzyluleBjE8paAKhu127tbkESvSz-2FC-2Fddy5KEyiaNq-2BqdZ18bbPkwyt5pRo5BpZllpeF0sLqyYRWd9DKcrHYyqzcnz7IO9ECag-3D-3D )
+
+
+
+Don't want these daily digests for AI Automation Agency Hub?
+
+
+
+Change to:   Daily ( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJv2x-2FXYKi-2F266Yv7HF2lGr1yS73w1YzI4uY8AKvA5yee2RFnU9DFPB-2Bfh1RUMYhsP7ZH7q-2FKNdm5DIJVvhTgSZFivZW-2BcWod9C3gulBcZpgLLUO1c-2Fou7ym1f8bYUXfXb3dT5REBHfXQOSRN2jZdhSjx222hpIXQpi06vZpvNyTmJvKvObPYx-2BNyO1Hk9qkdFjH1ygm7Ho7q-2BaIOKBOvSvM-3DFsih_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BHvOV-2F4bb0quTft5LbmR2SGrSEYxEmvDujOxBxOQwJH6HxTIhfrxlzhYcc10mkoteIx5ndPfbL4NoyZexoim4axrPoZQKXoCIPKfG8zdWHBgfTxsqpL5JZUL0-2BxY4blE5m6oXhpQsXKfqBaT74n6CbNRBFTwOxL0-2FJaTRK2R6bimQB1j9O9DPAU-2FcLid3kt07w-3D-3D )   •  Monthly ( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJv2x-2FXYKi-2F266Yv7HF2lGr1yS73w1YzI4uY8AKvA5yee2RFnU9DFPB-2Bfh1RUMYhsP7ZH7q-2FKNdm5DIJVvhTgSZFivZW-2BcWod9C3gulBcZpgLLUO1c-2Fou7ym1f8bYUXfXb3dT5REBHfXQOSRN2jZdhSjx222hpIXQpi06vZpvNyTmJvKvObPYx-2BNyO1Hk9qkdFhtalb8CJuk75dnVXQgcVwk-3D2Cmw_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BI1tCBsYIN9bmrroDCSWYt83wSmjK0-2F7OPmSER-2FIWCmMgD5A9fY18eQxj6pvjgmnVfbYHGU75VA5mzFfSaJYF55inRWXJ-2BAKjhGVWa1-2FZZy-2Bh8MufAJ7Q7SgxqYqaUbu2146h3IvT0Qc5Wqp1p2mJVAgpZpoWfLP-2FOAN0Ei1yn84GCZfjsUv-2FL2e8p5GiaBpww-3D-3D )   •  Never ( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJv2x-2FXYKi-2F266Yv7HF2lGr1yS73w1YzI4uY8AKvA5yee2RFnU9DFPB-2Bfh1RUMYhsP7ZH7q-2FKNdm5DIJVvhTgSZFivZW-2BcWod9C3gulBcZpgLLUO1c-2Fou7ym1f8bYUXfXb3dT5REBHfXQOSRN2jZdhSjx222hpIXQpi06vZpvNyTmJvKvObPYx-2BNyO1Hk9qkdFg9SssJh9OGtEQ1i-2FvZ4u6o-3Dtmra_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BEReSmCeNSowzCWwO1Tf3rOicLgfapSFt60sBzxL0Wf7tfKbAbu35v9IYGBTz6DBHA1a-2FoMQFVCm1Gdg9OpzkW7rGCHu5rir2ocz0Gg7qkb-2BxFqsLvocrK2DwltBqAnqtRWWmInBma-2B3Ff39vtF-2FxlaASuk3eG-2FuZ7Wa-2Fm4-2Busi8hoAXL3zocThHbktXMPwCTA-3D-3D ) 
+
+
+
+Change notification settings ( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJqYIach7-2FtMhH3n-2Fh9qG9l1PI-2Fm-2BraVkdOOdLOhb-2F-2B9kC6CS8L3GE-2B2twtfU-2FANqqw-3D-3D-gpj_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BGoQ4lTvDrTGK9AobULmQTGrt8aNsg6VkF9JCq6rcjXV35XT2pzqB008stWa-2FTrsJn5kTV45XmwRU7KV5dzmEONVGAar9fyU0alnxJKn4pIKfKJGKJNv6Ia9lh9f31gJxer7OQT3C1PM91Mbmer8Q3kz0Fy517vPk2gSSViU30yVYnEApZlsMssnxXnW-2BvXtNg-3D-3D )
+
+
+
+Start your own s k o o l ( https://link.skool.com/ls/click?upn=u001.wK6x93jhdVos-2F3TofGJCJqYIach7-2FtMhH3n-2Fh9qG9l0GnWL4PQOS-2FZ5VkS4LpRuxHPJP5z1DFqcAdbM45gqXh7f0er2lpT40w361BDI0xenY65GuhcYmaYM7j40I2InVtSXWhnwWg-2Bt3GWioiuDkTuvlQ7DSg2aHMQ7uvTTrO7bp1zL789D-2FqVuZ0EwhLHi-2F34FaZIPirIP4HzmOFaOTAlmR82Yfdu4f1SvpmUiFexY-3Docnm_fx2qQ-2B-2ByoQWXYQrvI3o17hCR0RuU5MhB8Z1MOis7-2BQlra9TKB9UgM6OsCBKyV68YR7kLzPfkWMoMyk-2BSeMv9kmhurXPJrfQosU0zbpH9BF5U9PKz3SKjM2ZYeiSQXj1V8RIoSzVx8pd-2BdB-2FsAS2C6hA1ssePwImRxq9pBLwvFgGf7s04HfRJ0LOIOY4IVNV52rQXO61KZNoqkQ2hkmvSDnn497-2BPlhkEoxhi9e-2Folu9XJ-2F5oRmmVZpNoX-2BT247L5WVVi-2FmZspX11VuzmAsTY-2Fz02oKAjiF8M9hn6hpz19Ovy9GVmSZOT8oRck4RKD01xJlmCAx4F5Dvr9eqNgo-2B2-2BMTUlH5g7yOXqAv13dF-2BgVhKFfX9rixF9Ytmjaw-2BGMjPOcnbCeSjKDE1wVl2gmLEkC4T4NRZH-2FziZuwyFy0yrUKQPnlyabq4qKTgzaIi3KvsmCtg1FxnK1QOlTtpDoGGgnB33DaXkr3-2Ba54PLghlk7Zab7mkk2nMrV8J-2Fvvqu3cRs95xqQ4oSHVzpKg8Ewn3Vw-3D-3D )
+
+## Suggested Actions
+- [ ] Reply to sender
+- [ ] Forward to relevant party
+- [x] Archive after processing
