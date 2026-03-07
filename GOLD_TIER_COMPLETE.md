@@ -99,21 +99,9 @@ The Gold Tier AI Employee upgrade is **substantially complete** with 49 of 96 ta
 
 ## 🚀 How to Get Started
 
-### Option 1: Quick Start (Recommended)
 
-```bash
-# Run setup wizard
-python quick_start.py wizard
 
-# Or run individual commands
-python quick_start.py check      # Check prerequisites
-python quick_start.py install    # Install dependencies
-python quick_start.py auth       # Authentication guide
-python quick_start.py start      # Start orchestrator
-python quick_start.py status     # Show status
-```
-
-### Option 2: Manual Start
+### Option 1: Manual Start
 
 ```bash
 # 1. Install Python dependencies
