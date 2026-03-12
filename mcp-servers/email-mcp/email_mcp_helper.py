@@ -31,9 +31,9 @@ if __name__ == '__main__':
     if len(sys.argv) < 5:
         print(json.dumps({'success': False, 'error': 'Usage: email_mcp_helper.py send_email <to> <subject> <body>'}))
         sys.exit(1)
-    
+
     action = sys.argv[1]
-    
+
     if action == 'send_email':
         send_email(sys.argv[2], sys.argv[3], sys.argv[4])
     else:

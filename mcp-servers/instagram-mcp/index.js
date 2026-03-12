@@ -32,16 +32,16 @@ let authenticated = false;
 async function validateToken() {
     try {
         const response = await fetch(
-            `https://graph.facebook.com/${FB_CONFIG.version}/${IG_CONFIG.instagramBusinessAccountId}?fields=username,name&access_token=${IG_CONFIG.accessToken}`
+            `https://graph.facebook.com/${IG_CONFIG.version}/${IG_CONFIG.instagramBusinessAccountId}?fields=username,name&access_token=${IG_CONFIG.accessToken}`
         );
         const result = await response.json();
-        
+
         if (result.username) {
             authenticated = true;
             console.log(`✅ Instagram authenticated as ${result.username}`);
             return true;
         }
-        
+
         console.error('❌ Instagram token validation failed');
         return false;
     } catch (error) {

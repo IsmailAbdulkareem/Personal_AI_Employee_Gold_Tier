@@ -2,7 +2,7 @@
 
 ---
 version: 3.0 (Gold Tier)
-last_updated: 2026-03-04
+last updated: 2026-03-04
 Tier: Gold
 ---
 

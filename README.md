@@ -11,7 +11,6 @@ Autonomous AI Employee built with Qwen Code and Obsidian for managing communicat
 - [Commands Reference](#commands-reference)
 - [Project Structure](#project-structure)
 - [Setup Guide](#setup-guide)
-- [Gold Tier Upgrade Path](#gold-tier-upgrade-path)
 
 ---
 
@@ -54,22 +53,24 @@ python scripts/audit_logger.py report --vault AI_Employee_Vault_Gold_Tier
 
 | Feature | Status | Description |
 |---------|--------|-------------|
-| **Ralph Wiggum Loop** | 🟢 Ready | Autonomous multi-step task completion |
-| **Enhanced Audit Logging** | 🟢 Ready | 90+ days retention, weekly reports |
-| **Odoo Accounting** | 🟡 Planned | Full accounting integration via MCP |
-| **Facebook Integration** | 🟡 Planned | Post messages, generate summaries |
-| **Instagram Integration** | 🟡 Planned | Post content, analytics |
-| **Twitter (X) Integration** | 🟡 Planned | Post tweets, generate summaries |
-| **CEO Briefing** | 🟡 Planned | Weekly business audit with revenue metrics |
-| **Financial Reconciliation** | 🟡 Planned | Auto-categorize transactions |
+| **Ralph Wiggum Loop** | ✅ Complete | Autonomous multi-step task completion |
+| **Enhanced Audit Logging** | ✅ Complete | 90+ days retention, weekly reports |
+| **Facebook Integration** | ✅ Complete | Post messages via Graph API |
+| **Instagram Integration** | ✅ Complete | Post content via Graph API |
+| **LinkedIn Integration** | ✅ Complete | Post & message via browser automation |
+| **Email (Gmail) Integration** | ✅ Complete | Send/receive via Gmail API |
+| **WhatsApp Integration** | ✅ Complete | Send/receive via browser automation |
+| **Odoo Accounting** | 🟡 Code Ready | Full MCP server - needs Odoo install |
+| **Twitter (X) Integration** | 🟡 Code Ready | MCP server ready - needs dev account |
+| **CEO Briefing** | ✅ Complete | Weekly business audit with metrics |
+| **Financial Reconciliation** | 🟡 Code Ready | Auto-categorize transactions |
 
-### New Gold Tier Commands
+### Gold Tier Commands
 
 | Command | Description |
 |---------|-------------|
 | `python scripts/ralph_wiggum_loop.py "task"` | Start autonomous task loop |
 | `python scripts/audit_logger.py report` | Generate weekly audit report |
-| `python scripts/audit_logger.py query --type communication` | Query audit logs |
 | `python scripts/ceo_briefing_generator.py` | Generate CEO briefing |
 | `python scripts/weekly_audit.py` | Run weekly business audit |
 
@@ -78,206 +79,44 @@ python scripts/audit_logger.py report --vault AI_Employee_Vault_Gold_Tier
 ## 👁️ Watchers Overview
 
 All watchers follow the same pattern:
-- **First Run**: Scans existing messages/chats and marks them as "already seen"
+- **First Run**: Scans existing messages and marks them as "already seen"
 - **Monitoring**: Checks every 30-120 seconds for NEW messages
 - **Action Files**: Creates `.md` files in `AI_Employee_Vault_Gold_Tier/Needs_Action/`
 
-### Gmail Watcher
+### Active Watchers
 
-**Monitors:** Incoming emails with priority keywords
+| Watcher | Status | Setup Command | Send/Post Command |
+|---------|--------|---------------|-------------------|
+| **Gmail** | ✅ Working | `python watchers/gmail_watcher.py auth` | `python watchers/email_mcp_helper.py send_email "to" "subject" "body"` |
+| **WhatsApp** | ✅ Working | `python watchers/whatsapp_watcher.py auth` | `python watchers/whatsapp_mcp_helper.py send_message "Contact" "Message"` |
+| **LinkedIn** | ✅ Working | `python watchers/linkedin_watcher.py auth` | `python watchers/linkedin_mcp_helper.py create_post "Content"` |
+| **Facebook** | ✅ Working | Get token from Graph API Explorer | `cd mcp-servers/facebook-mcp && node post-to-facebook.js` |
+| **Instagram** | ✅ Working | Get token from Graph API Explorer | `cd mcp-servers/instagram-mcp && node post-image.js` |
+| **Twitter** | 🟡 Code Ready | Needs Twitter dev account | `cd mcp-servers/twitter-mcp && node index.js` |
 
-**Setup:**
-```bash
-# Authenticate Gmail (opens browser for OAuth)
-python watchers/gmail_watcher.py auth
+### How Watchers Work
+
+```
+1. Watcher detects NEW message
+   ↓
+2. Creates action file in Needs_Action/
+   ↓
+3. Orchestrator processes file
+   ↓
+4. Creates plan in Plans/
+   ↓
+5. Creates approval request in Pending_Approval/
+   ↓
+6. User approves (adds ✅ in Obsidian)
+   ↓
+7. MCP helper executes approved action
+   ↓
+8. File moved to Done/
+   ↓
+9. Audit log updated
 ```
 
-**Start Monitoring:**
-```bash
-# Start continuous monitoring
-python watchers/gmail_watcher.py start
-
-# Or use orchestrator
-python orchestrator.py run
-```
-
-**Send Email:**
-```bash
-python watchers/email_mcp_helper.py send_message "recipient@example.com" "Subject" "Message body"
-```
-
-**Reply to Email:**
-```bash
-python watchers/email_mcp_helper.py reply "recipient@example.com" "Re: Subject" "Your reply"
-```
-
-**Check Status:**
-```bash
-python watchers/gmail_watcher.py status
-```
-
----
-
-### WhatsApp Watcher
-
-**Monitors:** New WhatsApp messages with priority keywords
-
-**Setup:**
-```bash
-# Authenticate WhatsApp (scan QR code with phone)
-python watchers/whatsapp_watcher.py auth
-```
-
-**Start Monitoring:**
-```bash
-# Start continuous monitoring
-python watchers/whatsapp_watcher.py start
-
-# Or use orchestrator
-python orchestrator.py run
-```
-
-**Send Message:**
-```bash
-python watchers/whatsapp_watcher.py send --contact "Contact Name" --message "Your message"
-```
-
-**Reply to Message:**
-```bash
-python watchers/whatsapp_watcher.py reply --contact "Contact Name" --message "Your reply"
-```
-
-**Mark as Read:**
-```bash
-python watchers/whatsapp_watcher.py mark-read --contact "Contact Name"
-```
-
-**Check Status:**
-```bash
-python watchers/whatsapp_watcher.py status
-```
-
----
-
-### LinkedIn Watcher
-
-**Monitors:** LinkedIn messages and notifications
-
-**Setup:**
-```bash
-# Authenticate LinkedIn (opens browser for login)
-python watchers/linkedin_watcher.py auth
-```
-
-**Start Monitoring:**
-```bash
-# Start continuous monitoring
-python watchers/linkedin_watcher.py start
-
-# Or use orchestrator
-python orchestrator.py run
-```
-
-**Send Message:**
-```bash
-python watchers/linkedin_mcp_helper.py send_message "Contact Name" "Your message"
-```
-
-**Reply to Message:**
-```bash
-python watchers/linkedin_mcp_helper.py reply "Contact Name" "Your reply"
-```
-
-**Post Content:**
-```bash
-python scripts/linkedin_poster.py post --type insight --vault AI_Employee_Vault_Gold_Tier
-```
-
-**Check Status:**
-```bash
-python watchers/linkedin_watcher.py status
-```
-
----
-
-### Facebook Watcher (Gold Tier)
-
-**Monitors:** Facebook messages and notifications
-
-**Setup:**
-```bash
-# Authenticate Facebook (OAuth flow)
-python watchers/facebook_watcher.py auth
-```
-
-**Start Monitoring:**
-```bash
-python watchers/facebook_watcher.py start
-```
-
-**Post Content:**
-```bash
-python watchers/facebook_mcp_helper.py post_message "Your message"
-```
-
-**Check Status:**
-```bash
-python watchers/facebook_watcher.py status
-```
-
----
-
-### Instagram Watcher (Gold Tier)
-
-**Monitors:** Instagram DMs and notifications
-
-**Setup:**
-```bash
-# Authenticate Instagram
-python watchers/instagram_watcher.py auth
-```
-
-**Start Monitoring:**
-```bash
-python watchers/instagram_watcher.py start
-```
-
-**Post Content:**
-```bash
-python watchers/instagram_mcp_helper.py post_media --image "path/to/image.jpg" --caption "Caption"
-```
-
-**Check Status:**
-```bash
-python watchers/instagram_watcher.py status
-```
-
----
-
-### Twitter/X Watcher (Gold Tier)
-
-**Monitors:** Twitter DMs and mentions
-
-**Setup:**
-```bash
-# Authenticate Twitter (OAuth 2.0)
-python watchers/twitter_watcher.py auth
-```
-
-**Start Monitoring:**
-```bash
-python watchers/twitter_watcher.py start
-```
-
-**Post Tweet:**
-```bash
-python watchers/twitter_mcp_helper.py post_tweet "Your tweet content"
-```
-
-**Check Status:**
-```bash
-python watchers/twitter_watcher.py status
-```
+**Note:** For detailed watcher documentation, see `docs/WATCHERS_CLEANUP.md`
 
 ---
 
@@ -391,111 +230,32 @@ For multi-step tasks, the Ralph Wiggum pattern keeps Claude working until comple
 
 ## 📚 Commands Reference
 
-### Orchestrator Commands
+### Orchestrator
 
 | Command | Description |
 |---------|-------------|
 | `python orchestrator.py process` | Process all Needs_Action files |
-| `python orchestrator.py run` | Run continuous monitoring mode |
-| `python orchestrator.py status` | Check orchestrator status |
+| `python orchestrator.py run` | Run continuous monitoring |
+| `python orchestrator.py status` | Check status |
 
-### Gmail Commands
+### Watchers & MCP Helpers
 
-| Command | Description |
-|---------|-------------|
-| `python watchers/gmail_watcher.py auth` | Authenticate Gmail |
-| `python watchers/gmail_watcher.py start` | Start monitoring |
-| `python watchers/gmail_watcher.py status` | Check status |
-| `python watchers/email_mcp_helper.py send_message "to" "subject" "body"` | Send email |
-| `python watchers/email_mcp_helper.py reply "to" "subject" "body"` | Reply to email |
+| Platform | Authenticate | Send/Post |
+|----------|-------------|-----------|
+| **Gmail** | `python watchers/gmail_watcher.py auth` | `python watchers/email_mcp_helper.py send_email "to" "subject" "body"` |
+| **WhatsApp** | `python watchers/whatsapp_watcher.py auth` | `python watchers/whatsapp_mcp_helper.py send_message "Contact" "Message"` |
+| **LinkedIn** | `python watchers/linkedin_watcher.py auth` | `python watchers/linkedin_mcp_helper.py create_post "Content"` |
+| **Facebook** | Get token from Graph API Explorer | `cd mcp-servers/facebook-mcp && node post-to-facebook.js` |
+| **Instagram** | Get token from Graph API Explorer | `cd mcp-servers/instagram-mcp && node post-image.js` |
 
-### WhatsApp Commands
-
-| Command | Description |
-|---------|-------------|
-| `python watchers/whatsapp_watcher.py auth` | Authenticate WhatsApp |
-| `python watchers/whatsapp_watcher.py start` | Start monitoring |
-| `python watchers/whatsapp_watcher.py status` | Check status |
-| `python watchers/whatsapp_watcher.py send --contact "Name" --message "Text"` | Send message |
-| `python watchers/whatsapp_watcher.py reply --contact "Name" --message "Text"` | Reply to message |
-| `python watchers/whatsapp_watcher.py mark-read --contact "Name"` | Mark chat as read |
-
-### LinkedIn Commands
+### Gold Tier Scripts
 
 | Command | Description |
 |---------|-------------|
-| `python watchers/linkedin_watcher.py auth` | Authenticate LinkedIn |
-| `python watchers/linkedin_watcher.py start` | Start monitoring |
-| `python watchers/linkedin_watcher.py status` | Check status |
-| `python watchers/linkedin_mcp_helper.py send_message "Name" "Text"` | Send message |
-| `python watchers/linkedin_mcp_helper.py reply "Name" "Text"` | Reply to message |
-| `python scripts/linkedin_poster.py post --type insight` | Post content |
-
-### Facebook Commands (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python watchers/facebook_watcher.py auth` | Authenticate Facebook |
-| `python watchers/facebook_watcher.py start` | Start monitoring |
-| `python watchers/facebook_watcher.py status` | Check status |
-| `python watchers/facebook_mcp_helper.py post_message "Text"` | Post message |
-
-### Instagram Commands (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python watchers/instagram_watcher.py auth` | Authenticate Instagram |
-| `python watchers/instagram_watcher.py start` | Start monitoring |
-| `python watchers/instagram_watcher.py status` | Check status |
-| `python watchers/instagram_mcp_helper.py post_media --image "path" --caption "Text"` | Post media |
-
-### Twitter/X Commands (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python watchers/twitter_watcher.py auth` | Authenticate Twitter |
-| `python watchers/twitter_watcher.py start` | Start monitoring |
-| `python watchers/twitter_watcher.py status` | Check status |
-| `python watchers/twitter_mcp_helper.py post_tweet "Text"` | Post tweet |
-
-### Odoo Accounting Commands (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python mcp-servers/odoo-mcp/auth.py` | Authenticate Odoo |
-| `python mcp-servers/odoo-mcp/create_invoice.py` | Create invoice |
-| `python mcp-servers/odoo-mcp/record_payment.py` | Record payment |
-| `python mcp-servers/odoo-mcp/generate_report.py` | Generate financial report |
-
-### Approval Workflow
-
-| Command | Description |
-|---------|-------------|
-| `python scripts/approval_workflow_enhanced.py check` | Check pending approvals |
-| `python scripts/approval_workflow_enhanced.py execute` | Execute approved actions |
-
-### Ralph Wiggum Loop (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python scripts/ralph_wiggum_loop.py "task"` | Start autonomous task loop |
-| `python scripts/ralph_wiggum_loop.py "task" --max-iterations 20` | Custom max iterations |
-
-### Audit Logging (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python scripts/audit_logger.py log --type communication --action email_sent` | Log event |
-| `python scripts/audit_logger.py query --start-date 2026-03-01` | Query events |
-| `python scripts/audit_logger.py report` | Generate weekly report |
-| `python scripts/audit_logger.py cleanup` | Clean up old logs |
-
-### CEO Briefing (Gold Tier)
-
-| Command | Description |
-|---------|-------------|
-| `python scripts/ceo_briefing_generator.py` | Generate CEO briefing |
-| `python scripts/weekly_audit.py` | Run weekly business audit |
+| `python scripts/ralph_wiggum_loop.py "task"` | Autonomous task loop |
+| `python scripts/audit_logger.py report` | Weekly audit report |
+| `python scripts/ceo_briefing_generator.py` | CEO briefing |
+| `python scripts/weekly_audit.py` | Weekly business audit |
 
 ---
 
@@ -655,109 +415,34 @@ python scripts/ceo_briefing_generator.py --vault AI_Employee_Vault_Gold_Tier
 
 ---
 
-## 📊 Priority Keywords
+## 🏆 Gold Tier Status
 
-Watchers detect messages containing these keywords:
-
-- **Urgent**: `urgent`, `asap`, `immediate`, `quick`
-- **Financial**: `invoice`, `payment`, `money`, `billing`
-- **Business**: `client`, `project`, `meeting`, `deadline`
-- **Support**: `help`, `issue`, `problem`, `error`, `call`, `today`
-
-Messages with these keywords get **HIGH** priority, others get **normal** priority.
-
----
-
-## 🔧 Troubleshooting
-
-### Watcher Not Detecting Messages
-
-1. Check logs in `AI_Employee_Vault_Gold_Tier/Logs/`
-2. Verify authentication: `python watchers/<name>_watcher.py status`
-3. Re-authenticate if needed: `python watchers/<name>_watcher.py auth`
-
-### Browser Session Issues
-
-```bash
-# Kill all Chrome processes
-taskkill /F /IM chrome.exe
-
-# Clear session (WhatsApp)
-rmdir /s /q watchers\.whatsapp_session
-
-# Re-authenticate
-python watchers/whatsapp_watcher.py auth
-```
-
-### Action Files Not Created
-
-1. Check if watcher is running
-2. Verify `Needs_Action/` folder exists
-3. Check processed messages cache: `watchers/processed_messages.json`
-
-### Ralph Wiggum Loop Issues
-
-1. Check state file: `AI_Employee_Vault_Gold_Tier/In_Progress/ralph_state.json`
-2. Review iteration count (max: 10 by default)
-3. Check for errors in audit logs
-
-### Audit Log Queries
-
-```bash
-# Query last 7 days
-python scripts/audit_logger.py query --start-date 2026-02-26
-
-# Query by type
-python scripts/audit_logger.py query --type communication
-
-# Query by actor
-python scripts/audit_logger.py query --actor AI_Employee
-```
+| Metric | Target | Current | Status |
+|--------|--------|---------|--------|
+| **Ralph Wiggum Loop** | Complete | ✅ Working | Done |
+| **Audit Logging** | 90+ days | ✅ Working | Done |
+| **Facebook Integration** | Complete | ✅ Working | Done |
+| **Instagram Integration** | Complete | ✅ Working | Done |
+| **LinkedIn Integration** | Complete | ✅ Working | Done |
+| **Email (Gmail)** | Complete | ✅ Working | Done |
+| **WhatsApp** | Complete | ✅ Working | Done |
+| **Odoo Accounting** | Code Ready | 🟡 Needs Install | Ready |
+| **Twitter Integration** | Code Ready | 🟡 Needs Dev Account | Ready |
+| **CEO Briefing** | Complete | ✅ Working | Done |
 
 ---
 
-## 🏆 Gold Tier Success Metrics
+## 📖 Related Documentation
 
-| Metric | Target | Current |
-|--------|--------|---------|
-| Task Completion Rate | 99%+ | - |
-| Response Time (Urgent) | < 1 hour | - |
-| Audit Log Retention | 90+ days | ✅ |
-| Approval Rate | > 95% | - |
-| Autonomous Task Success | 90%+ | - |
-| Weekly Audit Generated | Every Monday | - |
-
----
-
-## 📈 Upgrade Path from Silver to Gold
-
-See [GOLD_TIER_REQUIREMENTS.md](GOLD_TIER_REQUIREMENTS.md) for detailed checklist.
-
-### Phase 1: Foundation ✅
-- [x] Ralph Wiggum Loop
-- [x] Enhanced Audit Logging
-
-### Phase 2: Accounting (In Progress)
-- [ ] Odoo Installation
-- [ ] Odoo MCP Server
-- [ ] Bank Feed Integration
-
-### Phase 3: Social Media Expansion
-- [ ] Facebook Integration
-- [ ] Instagram Integration
-- [ ] Twitter Integration
-
-### Phase 4: Business Intelligence
-- [ ] CEO Briefing Generator
-- [ ] Weekly Audit Automation
-- [ ] Financial Reconciliation
-
-### Phase 5: Documentation
-- [ ] Architecture Documentation
-- [ ] Lessons Learned
-- [ ] Gold Tier README (This file) ✅
+| Document | Purpose |
+|----------|---------|
+| [`GOLD_TIER_COMPLETE.md`](GOLD_TIER_COMPLETE.md) | ✅ Implementation summary - **READ THIS FIRST** |
+| [`GOLD_TIER_REQUIREMENTS.md`](GOLD_TIER_REQUIREMENTS.md) | 📋 Original requirements checklist (reference) |
+| [`docs/WATCHERS_CLEANUP.md`](docs/WATCHERS_CLEANUP.md) | 🧹 Watchers folder organization |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | 🏗️ System architecture |
+| [`LESSONS_LEARNED.md`](LESSONS_LEARNED.md) | 💡 Implementation insights |
 
 ---
 
-*Gold Tier AI Employee - Autonomous Business Partner*
-*From reactive assistant to proactive CEO briefing generator*
+*Gold Tier AI Employee - Production Ready*
+*Last Updated: March 12, 2026*

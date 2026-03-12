@@ -20,7 +20,7 @@ except ImportError:
 
 SESSION_DIR = Path(__file__).resolve().parent / '.whatsapp_session'
 CHECK_INTERVAL = 30
-VAULT_PATH_DEFAULT = Path(__file__).resolve().parent.parent / 'AI_Employee_Vault'
+VAULT_PATH_DEFAULT = Path(__file__).resolve().parent.parent / 'AI_Employee_Vault_Gold_Tier'
 LOG_FILE = VAULT_PATH_DEFAULT / 'Logs' / 'whatsapp_watcher.log'
 MEDIA_DIR_NAME = 'WhatsApp_Media'
 AUTH_TIMEOUT = 300000
@@ -33,7 +33,13 @@ class WhatsAppWatcher:
         self.needs_action = self.vault_path / 'Needs_Action'
         self.media_dir = self.vault_path / MEDIA_DIR_NAME
         self.check_interval = check_interval
-        self.processed_ids_file = Path(__file__).parent / 'processed_messages.json'
+        
+        # Save processed files in config folder
+        self.project_root = Path(__file__).resolve().parent.parent
+        self.config_dir = self.project_root / 'config'
+        self.config_dir.mkdir(parents=True, exist_ok=True)
+        self.processed_ids_file = self.config_dir / 'processed_messages.json'
+        
         self.running = False
         self.browser = None
         self.page = None

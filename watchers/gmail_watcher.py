@@ -39,7 +39,9 @@ SCOPES = [
 ]
 
 # Track processed emails to avoid duplicates
-PROCESSED_FILE = Path(__file__).resolve().parent / ".gmail_processed.json"
+CONFIG_DIR = PROJECT_ROOT / "config"
+CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+PROCESSED_FILE = CONFIG_DIR / ".gmail_processed.json"
 
 
 def authenticate() -> Credentials:
@@ -291,6 +293,7 @@ status: pending
 
         try:
             message = MIMEMultipart()
+            message["from"] = "me"
             message["to"] = to
             message["subject"] = subject
             message.attach(MIMEText(body, "plain", "utf-8"))
@@ -343,7 +346,7 @@ status: pending
 
 
 def main():
-    vault_path = PROJECT_ROOT / "AI_Employee_Vault"
+    vault_path = PROJECT_ROOT / "AI_Employee_Vault_Gold_Tier"
     print("=" * 55)
     print("  GMAIL WATCHER - Silver Tier")
     print(f"  Checking every {CHECK_INTERVAL} seconds")

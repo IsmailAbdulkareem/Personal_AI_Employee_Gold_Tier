@@ -1,0 +1,9 @@
+{
+  "name": "watchers",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "cross-spawn": "^7.0.6",
+    "dotenv": "^16.3.1"
+  }
+}

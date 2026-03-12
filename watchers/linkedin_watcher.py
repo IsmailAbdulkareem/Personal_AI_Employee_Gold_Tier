@@ -15,10 +15,12 @@ from base_watcher import BaseWatcher
 
 # -- Config --
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CONFIG_DIR = PROJECT_ROOT / "config"
+CONFIG_DIR.mkdir(parents=True, exist_ok=True)
 CHECK_INTERVAL = 60  # seconds between scans
 SESSION_DIR = Path(__file__).resolve().parent / ".linkedin_session"
 
-PROCESSED_FILE = Path(__file__).resolve().parent / ".linkedin_processed.json"
+PROCESSED_FILE = CONFIG_DIR / ".linkedin_processed.json"
 
 LOGIN_WAIT_TIMEOUT = 120
 PAGE_LOAD_TIMEOUT = 60000
@@ -783,13 +785,6 @@ summary: "LinkedIn message from {sender} about {', '.join(keywords)}"
                     self.logger.info("Visibility dialog may still be present or already gone")
                 page.wait_for_timeout(1000)
 
-                # Take a debug screenshot so we can see what's on screen
-                try:
-                    page.screenshot(path='debug_after_done.png')
-                    self.logger.info("Screenshot saved: debug_after_done.png")
-                except Exception:
-                    pass
-
                 # Log all buttons visible right now for debugging
                 btn_info = page.evaluate('''() => {
                     const btns = Array.from(document.querySelectorAll('button'));
@@ -866,10 +861,6 @@ summary: "LinkedIn message from {sender} about {', '.join(keywords)}"
 
                 if not final_clicked:
                     self.logger.error("Could not find an enabled Post button after Done")
-                    try:
-                        page.screenshot(path='debug_no_post_btn.png')
-                    except Exception:
-                        pass
                     return {"success": False, "error": "Final Post button not found after visibility dialog"}
 
                 # Wait and verify the composer closed (= post was accepted by LinkedIn)
@@ -884,19 +875,8 @@ summary: "LinkedIn message from {sender} about {', '.join(keywords)}"
                 except Exception:
                     # Composer didn't close — LinkedIn may have shown an error
                     self.logger.warning(
-                        "Composer did not close after Post click — post may not have published. "
-                        "Check debug_post_final.png"
+                        "Composer did not close after Post click — post may not have published."
                     )
-                    try:
-                        page.screenshot(path='debug_post_final.png')
-                    except Exception:
-                        pass
-
-                try:
-                    page.screenshot(path='debug_post_done.png')
-                    self.logger.info("Screenshot saved: debug_post_done.png")
-                except Exception:
-                    pass
 
                 self.logger.info("LinkedIn post created successfully")
                 return {"success": True, "post_text": post_text[:50] + "..."}
